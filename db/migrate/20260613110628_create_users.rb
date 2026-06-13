@@ -1,6 +1,6 @@
 class CreateUsers < ActiveRecord::Migration[8.1]
   def change
-    create_table :users do |t|
+    create_table :users, force: :cascade do |t|
       t.string :name
       t.date :dob
       t.string :email
